@@ -13,7 +13,7 @@
 <link rel="mask-icon" href="{{ url_for('static', filename='safari-pinned-tab.svg')}} color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-      <title>About :: Merlin Halliday</title>
+      <title>{{ page.meta.title }} :: Merlin Halliday</title>
       <link href="{{ url_for('static', filename='flag-icon-css.css') }}"rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="{{ url_for('static', filename='min.css') }}">
    </head>
@@ -46,11 +46,10 @@
          </header>
          <main class="content">
             <div class="post">
-                  <h2 class="post-title"><font style="vertical-align: inherit;">About</font></h2>
+                  <h2 class="post-title"><font style="vertical-align: inherit;">{{ page.meta.header }}</font></h2>
                   <hr>
-               <h2><font style="vertical-align: inherit;">{{ articles.meta.title }}</font></font></h2>
                <article>
-                  <p><font style="vertical-align: inherit;">{{ articles.html|safe }}</font></p>
+                  <p><font style="vertical-align: inherit;">{{ page.html|safe }}</font></p>
                </article>
                   <hr>
                <div class="post-info">
@@ -60,7 +59,7 @@
                         <line x1="1.05" y1="12" x2="7" y2="12"></line>
                         <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
                      </svg>
-                     <a href="" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MH</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> @ 2022-08-23</font></font>
+                     <a href="" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MH</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> @ {{ page.meta.date }}</font></font>
                   </p>
                </div>
             </div>
